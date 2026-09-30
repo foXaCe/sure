@@ -48,4 +48,3 @@ ca:
       clear_cache:
         cache_cleared: La memòria cau de dades s'ha netejat. Això pot trigar uns instants a completar-se.
       not_authorized: No estàs autoritzat/da per realitzar aquesta acció
-

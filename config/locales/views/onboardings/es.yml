@@ -22,7 +22,7 @@ es:
       subtitle: Vamos a completar tu perfil.
       title: Vamos a configurar lo básico
     show:
-      message: Estamos muy emocionados de que estés aquí. En el siguiente paso te 
+      message: Estamos muy emocionados de que estés aquí. En el siguiente paso te
         haremos unas preguntas para completar tu perfil y luego configuraremos todo para ti.
       setup: Configurar cuenta
       title: Bienvenido a %{product_name}

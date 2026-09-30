@@ -204,7 +204,7 @@ test "syncs balances" do
 end
 
 # BAD - Testing ActiveRecord functionality
-test "saves balance" do 
+test "saves balance" do
   balance_record = Balance.new(balance: 100, currency: "USD")
   assert balance_record.save
 end

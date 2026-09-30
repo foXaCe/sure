@@ -1,9 +1,9 @@
 ---
-description: 
-globs: 
+description:
+globs:
 alwaysApply: true
 ---
-This rule serves as high-level documentation for how you should write code in this codebase. 
+This rule serves as high-level documentation for how you should write code in this codebase.
 
 ## Project Tech Stack
 
@@ -30,7 +30,7 @@ Dependencies are a natural part of building software, but we aim to minimize the
 
 - Push Rails to its limits before adding new dependencies
 - When a new dependency is added, there must be a strong technical or business reason to add it
-- When adding dependencies, you should favor old and reliable over new and flashy 
+- When adding dependencies, you should favor old and reliable over new and flashy
 
 ### Convention 2: Leverage POROs and concerns over "service objects"
 
@@ -70,4 +70,3 @@ All code should maximize readability and simplicity.
 - Enforce `null` checks, unique indexes, and other simple validations in the DB
 - ActiveRecord validations _may_ mirror the DB level ones, but not 100% necessary.  These are for convenience when error handling in forms.  Always prefer client-side form validation when possible.
 - Complex validations and business logic should remain in ActiveRecord
-

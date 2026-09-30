@@ -33,4 +33,3 @@ ca:
       trade_history_entry: "%{qty} accions de %{security} a %{price}"
       total_return_label: Rendiment total
       unknown: Desconegut
-

@@ -91,18 +91,18 @@ export default class extends Controller {
   async validateIssuer(event) {
     const issuerInput = event.target
     const issuer = issuerInput.value.trim()
-    
+
     if (!issuer) return
 
     try {
       // Construct discovery URL
-      const discoveryUrl = issuer.endsWith('/') 
+      const discoveryUrl = issuer.endsWith('/')
         ? `${issuer}.well-known/openid-configuration`
         : `${issuer}/.well-known/openid-configuration`
 
       // Show loading state
       issuerInput.classList.add('border-yellow-300')
-      
+
       const response = await fetch(discoveryUrl, {
         method: 'GET',
         headers: { 'Accept': 'application/json' }
@@ -136,7 +136,7 @@ export default class extends Controller {
     if (!callbackDisplay) return
 
     const callbackUrl = callbackDisplay.textContent
-    
+
     // Copy to clipboard
     navigator.clipboard.writeText(callbackUrl).then(() => {
       // Show success feedback
@@ -144,7 +144,7 @@ export default class extends Controller {
       const originalText = button.innerHTML
       button.innerHTML = '<svg class="w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Copied!'
       button.classList.add('text-green-600')
-      
+
       setTimeout(() => {
         button.innerHTML = originalText
         button.classList.remove('text-green-600')

@@ -15,7 +15,7 @@ description: Miscellaneous rules to get the AI to behave
 globs: *
 alwaysApply: true
 ---
-# General rules for AI 
+# General rules for AI
 
 - Use `Current.user` for the current user. Do NOT use `current_user`.
 - Use `Current.family` for the current family. Do NOT use `current_family`.
@@ -87,9 +87,9 @@ In the app, [account.rb](app/models/account.rb) is a Rails "delegated type" with
 
 ### Account Balances
 
-An account [balance.rb](app/models/account/balance.rb) represents a single balance value for an account on a specific `date`.  A series of balance records is generated daily for each account and is how we show a user's historical balance graph.  
+An account [balance.rb](app/models/account/balance.rb) represents a single balance value for an account on a specific `date`.  A series of balance records is generated daily for each account and is how we show a user's historical balance graph.
 
-- For simple accounts like a "Checking Account", the balance represents the amount of cash in the account for a date.  
+- For simple accounts like a "Checking Account", the balance represents the amount of cash in the account for a date.
 - For a more complex account like "Investment Brokerage", the `balance` represents the combination of the "cash balance" + "holdings value".  Each accountable type has different components that make up the "balance", but in all cases, the "balance" represents "How much the account is worth" (when `classification` is `asset`) or "How much is owed on the account" (when `classification` is `liability`)
 
 All balances are calculated daily by [balance_calculator.rb](app/models/account/balance_calculator.rb).
@@ -108,12 +108,12 @@ The `amount` of an [entry.rb](app/models/entry.rb) is a signed value.  A _negati
 
 - A negative amount for a credit card account represents a "payment" to that account, which _reduces_ its balance (since it is a `liability`)
 - A negative amount for a checking account represents an "income" to that account, which _increases_ its balance (since it is an `asset`)
-- A negative amount for an investment/brokerage trade represents a "sell" transaction, which _increases_ the cash balance of the account 
+- A negative amount for an investment/brokerage trade represents a "sell" transaction, which _increases_ the cash balance of the account
 
-There are 3 entry types, defined as [entryable.rb](app/models/entryable.rb) records: 
+There are 3 entry types, defined as [entryable.rb](app/models/entryable.rb) records:
 
 - `Valuation` - an account [valuation.rb](app/models/valuation.rb) is an entry that says, "here is the value of this account on this date".  It is an absolute measure of an account value / debt.  If there is an `Valuation` of 5,000 for today's date, that means that the account balance will be 5,000 today.
-- `Transaction` - an account [transaction.rb](app/models/transaction.rb) is an entry that alters the account balance by the `amount`.  This is the most common type of entry and can be thought of as an "income" or "expense".  
+- `Transaction` - an account [transaction.rb](app/models/transaction.rb) is an entry that alters the account balance by the `amount`.  This is the most common type of entry and can be thought of as an "income" or "expense".
 - `Trade` - an account [trade.rb](app/models/trade.rb) is an entry that only applies to an investment account.  This represents a "buy" or "sell" of a holding and has a `qty` and `price`.
 
 ### Account Transfers
@@ -127,8 +127,8 @@ A [transfer.rb](app/models/transfer.rb) represents a movement of money between t
 
 There are two primary forms of a transfer:
 
-- Regular transfer - a normal movement of money between two accounts.  For example, "Transfer $500 from Checking account to Brokerage account". 
-- Debt payment - a special form of transfer where the _receiver_ of funds is a [loan.rb](app/models/loan.rb) type account.  
+- Regular transfer - a normal movement of money between two accounts.  For example, "Transfer $500 from Checking account to Brokerage account".
+- Debt payment - a special form of transfer where the _receiver_ of funds is a [loan.rb](app/models/loan.rb) type account.
 
 Regular transfers are typically _excluded_ from income and expense calculations while a debt payment is considered an "expense".
 
@@ -156,7 +156,7 @@ The most important type of sync is the account sync.  It is orchestrated by the 
 
 - Auto-matches transfer records for the account
 - Calculates daily [balance.rb](app/models/account/balance.rb) records for the account from `account.start_date` to `Date.current` using [base_calculator.rb](app/models/account/balance/base_calculator.rb)
-  - Balances are dependent on the calculation of [holding.rb](app/models/holding.rb), which uses [base_calculator.rb](app/models/account/holding/base_calculator.rb) 
+  - Balances are dependent on the calculation of [holding.rb](app/models/holding.rb), which uses [base_calculator.rb](app/models/account/holding/base_calculator.rb)
 - Enriches transaction data if enabled by user
 
 An account sync happens every time an [entry.rb](app/models/entry.rb) is updated.
@@ -225,11 +225,11 @@ module ExchangeRate::Provided
     end
 
     def find_or_fetch_rate(from:, to:, date: Date.current, cache: true)
-      # Implementation 
+      # Implementation
     end
 
     def sync_provider_rates(from:, to:, start_date:, end_date: Date.current)
-      # Implementation 
+      # Implementation
     end
   end
 end
@@ -287,11 +287,11 @@ end
 
 ```markdown
 ---
-description: 
-globs: 
+description:
+globs:
 alwaysApply: true
 ---
-This rule serves as high-level documentation for how you should write code in this codebase. 
+This rule serves as high-level documentation for how you should write code in this codebase.
 
 ## Project Tech Stack
 
@@ -318,7 +318,7 @@ Dependencies are a natural part of building software, but we aim to minimize the
 
 - Push Rails to its limits before adding new dependencies
 - When a new dependency is added, there must be a strong technical or business reason to add it
-- When adding dependencies, you should favor old and reliable over new and flashy 
+- When adding dependencies, you should favor old and reliable over new and flashy
 
 ### Convention 2: Leverage POROs and concerns over "service objects"
 
@@ -366,7 +366,7 @@ All code should maximize readability and simplicity.
 
 ```markdown
 ---
-description: 
+description:
 globs: test/**
 alwaysApply: false
 ---
@@ -409,7 +409,7 @@ Due to the open-source nature of this project, we have chosen Minitest + Fixture
 
   # BAD!!
   # Unnecessary test - in this case, this is simply testing ActiveRecord's functionality
-  test "saves balance" do 
+  test "saves balance" do
     balance_record = Balance.new(balance: 100, currency: "USD")
 
     assert balance_record.save
@@ -431,7 +431,7 @@ Due to the open-source nature of this project, we have chosen Minitest + Fixture
   end
 
   class ExampleClass < ActiveSupport::TestCase
-    test "boundaries are tested correctly" do 
+    test "boundaries are tested correctly" do
       result = ExampleClass.new.do_something
 
       # GOOD - we're only testing that the command was received, not internal implementation details
@@ -487,8 +487,8 @@ The codebase uses TailwindCSS v4.x (the newest version) with a custom design sys
 
 ```markdown
 ---
-description: 
-globs: 
+description:
+globs:
 alwaysApply: false
 ---
 This rule describes how to write Stimulus controllers.
@@ -557,7 +557,7 @@ This rule describes how to write Stimulus controllers.
 
 ```
 ---
-description: 
+description:
 globs: app/views/**,app/javascript/**,app/components/**/*.js
 alwaysApply: false
 ---
@@ -571,7 +571,7 @@ Use this rule to learn how to write ERB views, partials, and Stimulus controller
     - Element requires interactive behavior or Stimulus controllers
     - Element has configurable slots or complex APIs
     - Element needs accessibility features or ARIA support
-  
+
   - **Use Partials when:**
     - Element is primarily static HTML with minimal logic
     - Element is used in only one or few specific contexts
@@ -591,22 +591,22 @@ Use this rule to learn how to write ERB views, partials, and Stimulus controller
     <% dialog.with_header(title: "Account Settings") %>
     <% dialog.with_body { "Dialog content here" } %>
   <% end %>
-  
+
   <%# Component: Interactive with complex styling options %>
   <%= render ButtonComponent.new(text: "Save Changes", variant: "primary", confirm: "Are you sure?") %>
-  
+
   <%# Component: Reusable with variants %>
   <%= render FilledIconComponent.new(icon: "credit-card", variant: :surface) %>
-  
+
   <%# Partial: Static template content %>
   <%= render "shared/logo" %>
-  
+
   <%# Partial: Simple, context-specific content with basic styling %>
   <%= render "shared/trend_change", trend: @account.trend, comparison_label: "vs last month" %>
-  
+
   <%# Partial: Simple divider/utility %>
   <%= render "shared/ruler", classes: "my-4" %>
-  
+
   <%# Partial: Simple form utility %>
   <%= render "shared/form_errors", model: @account %>
   ```
@@ -632,7 +632,7 @@ Use this rule to learn how to write ERB views, partials, and Stimulus controller
 - **Stimulus Integration in Views**
   - Always use the **declarative approach** when integrating Stimulus controllers
   - The ERB template should declare what happens, the Stimulus controller should respond
-  - Refer to [stimulus_conventions.mdc](#original-file-cursorrulesstimulus_conventionsmdc) to learn how to incorporate them into 
+  - Refer to [stimulus_conventions.mdc](#original-file-cursorrulesstimulus_conventionsmdc) to learn how to incorporate them into
 
   GOOD Stimulus controller integration into views:
 
@@ -692,7 +692,7 @@ alwaysApply: true
   ```typescript
   // ✅ DO: Show good examples
   const goodExample = true;
-  
+
   // ❌ DON'T: Show anti-patterns
   const badExample = false;
   ```
@@ -763,7 +763,7 @@ alwaysApply: true
     select: { id: true, email: true },
     where: { status: 'ACTIVE' }
   });
-  
+
   // Consider adding to [prisma.mdc](.cursor/rules/prisma.mdc):
   // - Standard select fields
   // - Common where conditions

@@ -40,7 +40,7 @@ class AccountCard extends StatelessWidget {
 
   Color _getAccountColor(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    
+
     if (account.isAsset) {
       return Colors.green;
     } else if (account.isLiability) {

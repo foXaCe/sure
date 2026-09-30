@@ -1,5 +1,5 @@
 ---
-description: 
+description:
 globs: test/**
 alwaysApply: false
 ---
@@ -42,7 +42,7 @@ Due to the open-source nature of this project, we have chosen Minitest + Fixture
 
   # BAD!!
   # Unnecessary test - in this case, this is simply testing ActiveRecord's functionality
-  test "saves balance" do 
+  test "saves balance" do
     balance_record = Balance.new(balance: 100, currency: "USD")
 
     assert balance_record.save
@@ -64,7 +64,7 @@ Due to the open-source nature of this project, we have chosen Minitest + Fixture
   end
 
   class ExampleClass < ActiveSupport::TestCase
-    test "boundaries are tested correctly" do 
+    test "boundaries are tested correctly" do
       result = ExampleClass.new.do_something
 
       # GOOD - we're only testing that the command was received, not internal implementation details
@@ -83,4 +83,3 @@ Due to the open-source nature of this project, we have chosen Minitest + Fixture
   - Use `mocha` gem
   - Always prefer `OpenStruct` when creating mock instances, or in complex cases, a mock class
   - Only mock what's necessary. If you're not testing return values, don't mock a return value.
-

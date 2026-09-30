@@ -42,13 +42,13 @@ export default class extends Controller {
       allLinks
         .style("opacity", (linkData) => targetLinksSet.has(linkData) ? 1 : HOVER_OPACITY)
         .style("filter", (linkData) => targetLinksSet.has(linkData) ? HOVER_FILTER : "none");
-      
+
       const connectedNodes = new Set();
       targetLinks.forEach(link => {
         connectedNodes.add(link.source);
         connectedNodes.add(link.target);
       });
-      
+
       allNodes.style("opacity", (nodeData) => connectedNodes.has(nodeData) ? 1 : HOVER_OPACITY);
     };
 
@@ -123,7 +123,7 @@ export default class extends Controller {
 
     // Draw links
     const linksContainer = svg.append("g").attr("fill", "none");
-    
+
     const linkPaths = linksContainer
       .selectAll("path")
       .data(sankeyData.links)
@@ -229,10 +229,10 @@ export default class extends Controller {
       .style("cursor", "default")
       .on("mouseenter", (event, d) => {
         // Find all links connected to this node
-        const connectedLinks = sankeyData.links.filter(link => 
+        const connectedLinks = sankeyData.links.filter(link =>
           link.source === d || link.target === d
         );
-        
+
         applyHoverEffect(connectedLinks, linkPaths, nodeGroups);
         this.#showNodeTooltip(event, d);
       })
@@ -284,16 +284,16 @@ export default class extends Controller {
     }
 
     // Format the tooltip content
-    const formattedValue = this.currencySymbolValue + Number.parseFloat(value).toLocaleString(undefined, { 
-      minimumFractionDigits: 2, 
-      maximumFractionDigits: 2 
+    const formattedValue = this.currencySymbolValue + Number.parseFloat(value).toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
     });
     const percentageText = percentage ? `${percentage}%` : "0%";
-    
-    const content = title 
+
+    const content = title
       ? `${title}<br/>${formattedValue} (${percentageText})`
       : `${formattedValue} (${percentageText})`;
-    
+
     this.tooltip
       .html(content)
       .style("left", `${event.pageX + 10}px`)
@@ -319,4 +319,4 @@ export default class extends Controller {
         .style("opacity", 0);
     }
   }
-} 
+}

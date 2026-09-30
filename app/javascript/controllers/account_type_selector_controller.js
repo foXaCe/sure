@@ -14,7 +14,7 @@ export default class extends Controller {
     const selectedType = selectElement ? selectElement.value : ''
     const container = this.subtypeContainerTarget
     const accountId = this.accountIdValue
-    
+
     // Hide all subtype selects
     const subtypeSelects = container.querySelectorAll('.subtype-select')
     subtypeSelects.forEach(select => {
@@ -25,7 +25,7 @@ export default class extends Controller {
         selectElement.removeAttribute('name')
       }
     })
-    
+
    // Don't show any subtype select for Skip option
    if (selectedType === 'Skip') {
     return

@@ -294,7 +294,7 @@ class AuthService {
   Future<AuthTokens?> getStoredTokens() async {
     final tokensJson = await _storage.read(key: _tokenKey);
     if (tokensJson == null) return null;
-    
+
     try {
       return AuthTokens.fromJson(jsonDecode(tokensJson));
     } catch (e) {
@@ -305,7 +305,7 @@ class AuthService {
   Future<User?> getStoredUser() async {
     final userJson = await _storage.read(key: _userKey);
     if (userJson == null) return null;
-    
+
     try {
       return User.fromJson(jsonDecode(userJson));
     } catch (e) {

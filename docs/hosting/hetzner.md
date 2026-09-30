@@ -379,7 +379,7 @@ docker compose ps
 For better performance on Hetzner Cloud:
 
 1. **Use SSD storage**: Hetzner Cloud provides NVMe SSD storage by default
-2. **Choose appropriate server size**: 
+2. **Choose appropriate server size**:
    - Minimum: CX21 (2 vCPU, 4GB RAM)
    - Recommended: CX31 (2 vCPU, 8GB RAM) for multiple users
 3. **Enable swap** (if needed):

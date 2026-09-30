@@ -10,7 +10,7 @@ This guide also covers the differences between **asset** and **liability** accou
 
 > [!IMPORTANT]
 > Sure is evolving quickly. If you find something inaccurate while following this guide, please:
-> 
+>
 > - Ask in the [Discord](https://discord.gg/36ZGBsxYEK)
 > - Open an [issue](https://github.com/we-promise/sure/issues/new/choose)
 > - Or if you know the answer, open a [PR](https://github.com/we-promise/sure/compare)!
@@ -19,7 +19,7 @@ This guide also covers the differences between **asset** and **liability** accou
 ## 1. Creating your Sure Account
 
 Once Sure is installed, open a browser and navigate to [localhost:3000](http://localhost:3000/sessions/new).<br />
-You will see the **login page** (pictured below). Since we do not have an account yet, click on **Sign Up** to begin. 
+You will see the **login page** (pictured below). Since we do not have an account yet, click on **Sign Up** to begin.
 
 <img width="2508" height="1314" alt="Landing page on a fresh install." src="https://github.com/user-attachments/assets/2319dc87-5615-4473-bebc-8360dd983367" />
 <br />
@@ -35,7 +35,7 @@ When you arrive at the main dashboard, showing **No accounts yet**, you’re all
 > [!Note]
 > The next sections of this guide cover how to **manually add accounts and transactions** in Sure.<br />
 > If you’d like to use an integration with a data provider instead, see:
-> 
+>
 > - **Lunch Flow** (WIP)
 > - [**Plaid**](/docs/hosting/plaid.md)
 > - **SimpleFin** (WIP)
