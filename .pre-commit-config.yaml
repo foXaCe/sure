@@ -5,6 +5,12 @@ repos:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
+        # Helm templates use Go templating, VCR cassettes contain !binary tags
+        exclude: |
+          (?x)^(
+            charts/.*\.yaml
+            | test/vcr_cassettes/.*\.yml
+          )
       - id: check-json
       - id: check-merge-conflict
       - id: check-added-large-files
