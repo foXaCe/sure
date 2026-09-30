@@ -10,6 +10,7 @@ repos:
           (?x)^(
             charts/.*\.yaml
             | test/vcr_cassettes/.*\.yml
+            | test/fixtures/.*\.yml
           )
       - id: check-json
       - id: check-merge-conflict
