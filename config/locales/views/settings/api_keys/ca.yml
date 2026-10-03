@@ -73,4 +73,3 @@ ca:
         usage_instructions: "Utilitza la teva clau API incloent-la a la capçalera X-Api-Key:"
         copy_key: "Copia la clau API"
         continue: "Continua a la configuració de claus API"
-

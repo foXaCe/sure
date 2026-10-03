@@ -51,7 +51,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     if (transactionsProvider == null || !mounted) {
       return;
     }
-    
+
     final currentPendingCount = transactionsProvider.pendingCount;
 
     // If pending count decreased, it means transactions were synced
@@ -76,7 +76,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Future<void> _loadAccounts() async {
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
     final accountsProvider = Provider.of<AccountsProvider>(context, listen: false);
-    
+
     final accessToken = await authProvider.getValidAccessToken();
     if (accessToken == null) {
       // Token is invalid, redirect to login
@@ -85,7 +85,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     }
 
     await accountsProvider.fetchAccounts(accessToken: accessToken);
-    
+
     // Check if unauthorized
     if (accountsProvider.errorMessage == 'unauthorized') {
       await authProvider.logout();
@@ -372,7 +372,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 }
 
           // Show error state
-          if (accountsProvider.errorMessage != null && 
+          if (accountsProvider.errorMessage != null &&
               accountsProvider.errorMessage != 'unauthorized') {
             return Center(
               child: Padding(

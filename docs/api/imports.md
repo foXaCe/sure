@@ -98,4 +98,3 @@ Errors conform to the shared `ErrorResponse` schema:
   "errors": ["Optional array of validation errors"]
 }
 ```
-

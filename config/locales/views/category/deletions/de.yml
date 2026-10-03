@@ -11,4 +11,3 @@ de:
         delete_category: Kategorie löschen?
         explanation: Durch das Löschen dieser Kategorie werden alle Transaktionen mit der Kategorie "%{category_name}" ohne Kategorie angezeigt Statt sie ohne Kategorie zu lassen, kannst du unten eine neue Kategorie zuweisen.
         replacement_category_prompt: Kategorie auswählen
-

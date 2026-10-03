@@ -39,4 +39,3 @@ nb:
         status_inactive: Yahoo Finance-tilkobling feilet
         connection_failed: Kunne ikke koble til Yahoo Finance
         troubleshooting: Sjekk internettilkoblingen og brannmurinnstillingene. Yahoo Finance kan være midlertidig utilgjengelig.
-

@@ -4,17 +4,17 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class DeviceService {
   static const String _deviceIdKey = 'device_id';
-  
+
   Future<Map<String, String>> getDeviceInfo() async {
     final prefs = await SharedPreferences.getInstance();
-    
+
     // Get or generate device ID
     String? deviceId = prefs.getString(_deviceIdKey);
     if (deviceId == null) {
       deviceId = _generateDeviceId();
       await prefs.setString(_deviceIdKey, deviceId);
     }
-    
+
     return {
       'device_id': deviceId,
       'device_name': _getDeviceName(),

@@ -31,6 +31,7 @@ en:
         balances, and cannot be undone.
       delete_title: Delete transaction
       details: Details
+      merge_duplicate: Yes, merge them
       exclude: Exclude
       exclude_description: Excluded transactions will be removed from budgeting calculations and reports.
       activity_type: Activity Type
@@ -66,7 +67,6 @@ en:
     uncategorized: "(uncategorized)"
     potential_duplicate_title: Possible duplicate detected
     potential_duplicate_description: This pending transaction may be the same as the posted transaction below. If so, merge them to avoid double-counting.
-    merge_duplicate: Yes, merge them
     keep_both: No, keep both
     transaction:
       pending: Pending

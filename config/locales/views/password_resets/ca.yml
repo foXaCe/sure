@@ -11,4 +11,3 @@ ca:
     update:
       invalid_token: Token invàlid.
       success: La teva contrasenya s'ha restablert correctament.
-

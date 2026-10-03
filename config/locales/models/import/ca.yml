@@ -11,4 +11,3 @@ ca:
           attributes:
             raw_file_str:
               invalid_csv_format: no és un format CSV vàlid
-

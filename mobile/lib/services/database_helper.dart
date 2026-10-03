@@ -12,7 +12,7 @@ class DatabaseHelper {
 
   Future<Database> get database async {
     if (_database != null) return _database!;
-    
+
     try {
       _database = await _initDB('sure_offline.db');
       return _database!;

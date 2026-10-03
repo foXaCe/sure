@@ -16,4 +16,3 @@ ca:
   transfer:
     name: Transferència a %{to_account}
     payment_name: Pagament a %{to_account}
-

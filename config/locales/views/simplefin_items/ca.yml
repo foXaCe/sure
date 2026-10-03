@@ -51,4 +51,3 @@ ca:
       status_with_summary: "Darrera sincronització fa %{timestamp} • %{summary}"
       syncing: Sincronitzant...
       update: Actualitza la connexió
-

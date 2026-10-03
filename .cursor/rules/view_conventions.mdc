@@ -1,5 +1,5 @@
 ---
-description: 
+description:
 globs: app/views/**,app/javascript/**,app/components/**/*.js
 alwaysApply: false
 ---
@@ -13,7 +13,7 @@ Use this rule to learn how to write ERB views, partials, and Stimulus controller
     - Element requires interactive behavior or Stimulus controllers
     - Element has configurable slots or complex APIs
     - Element needs accessibility features or ARIA support
-  
+
   - **Use Partials when:**
     - Element is primarily static HTML with minimal logic
     - Element is used in only one or few specific contexts
@@ -33,22 +33,22 @@ Use this rule to learn how to write ERB views, partials, and Stimulus controller
     <% dialog.with_header(title: "Account Settings") %>
     <% dialog.with_body { "Dialog content here" } %>
   <% end %>
-  
+
   <%# Component: Interactive with complex styling options %>
   <%= render ButtonComponent.new(text: "Save Changes", variant: "primary", confirm: "Are you sure?") %>
-  
+
   <%# Component: Reusable with variants %>
   <%= render FilledIconComponent.new(icon: "credit-card", variant: :surface) %>
-  
+
   <%# Partial: Static template content %>
   <%= render "shared/logo" %>
-  
+
   <%# Partial: Simple, context-specific content with basic styling %>
   <%= render "shared/trend_change", trend: @account.trend, comparison_label: "vs last month" %>
-  
+
   <%# Partial: Simple divider/utility %>
   <%= render "shared/ruler", classes: "my-4" %>
-  
+
   <%# Partial: Simple form utility %>
   <%= render "shared/form_errors", model: @account %>
   ```
@@ -74,7 +74,7 @@ Use this rule to learn how to write ERB views, partials, and Stimulus controller
 - **Stimulus Integration in Views**
   - Always use the **declarative approach** when integrating Stimulus controllers
   - The ERB template should declare what happens, the Stimulus controller should respond
-  - Refer to [stimulus_conventions.mdc](mdc:.cursor/rules/stimulus_conventions.mdc) to learn how to incorporate them into 
+  - Refer to [stimulus_conventions.mdc](mdc:.cursor/rules/stimulus_conventions.mdc) to learn how to incorporate them into
 
   GOOD Stimulus controller integration into views:
 
@@ -98,4 +98,3 @@ Use this rule to learn how to write ERB views, partials, and Stimulus controller
   - **Partials**: Use underscore prefix (e.g., `_trend_change.html.erb`, `_form_errors.html.erb`, `_sync_indicator.html.erb`)
   - **Shared partials**: Place in `app/views/shared/` directory for reusable content
   - **Context-specific partials**: Place in relevant controller view directory (e.g., `accounts/_account_sidebar_tabs.html.erb`)
-

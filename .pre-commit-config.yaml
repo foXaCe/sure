@@ -1,0 +1,18 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+        # Helm templates use Go templating, VCR cassettes contain !binary tags
+        exclude: |
+          (?x)^(
+            charts/.*\.yaml
+            | test/vcr_cassettes/.*\.yml
+            | test/fixtures/.*\.yml
+          )
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: ["--maxkb=500"]
