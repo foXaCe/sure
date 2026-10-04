@@ -128,6 +128,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "mocha"
+  # minitest 6 a extrait minitest/mock dans un gem separe
+  gem "minitest-mock", require: false
   gem "vcr"
   gem "webmock"
   gem "climate_control"
