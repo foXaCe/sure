@@ -131,11 +131,11 @@ class _TransactionFormScreenState extends State<TransactionFormScreen> {
       if (mounted) {
         if (success) {
           _log.info('TransactionForm', 'Transaction created successfully (saved locally)');
-          
+
           // Check current connectivity status to show appropriate message
           final connectivityService = Provider.of<ConnectivityService>(context, listen: false);
           final isOnline = connectivityService.isOnline;
-          
+
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(

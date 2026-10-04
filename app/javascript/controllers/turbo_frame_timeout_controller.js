@@ -39,4 +39,4 @@ export default class extends Controller {
       </div>
     `
   }
-} 
+}

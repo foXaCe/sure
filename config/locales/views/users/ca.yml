@@ -12,4 +12,3 @@ ca:
       unauthorized: No estàs autoritzat/da per realitzar aquesta acció.
     reset_with_sample_data:
       success: El teu compte s'ha restablert i s'estan preparant dades de mostra. Veureu dades de demostració en breu.
-

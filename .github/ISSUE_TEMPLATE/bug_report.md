@@ -14,7 +14,7 @@ assignees: ''
 
 - [ ] I have removed personal / sensitive data from screenshots and logs
 - [ ] I have searched [existing issues](https://github.com/we-promise/sure/issues?q=is:issue) and [discussions](https://github.com/we-promise/sure/discussions) to ensure this is not a duplicate issue
-    
+
 ### How are you using Sure?
 
 - [ ] I was a paying Maybe customer (hosted version)

@@ -4,7 +4,7 @@ es:
     edit:
       title: Restablecer contraseña
     new:
-      requested: Por favor, revisa tu correo electrónico para obtener 
+      requested: Por favor, revisa tu correo electrónico para obtener
         un enlace para restablecer tu contraseña.
       submit: Restablecer contraseña
       title: Restablecer contraseña

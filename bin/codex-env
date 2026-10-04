@@ -18,12 +18,12 @@ PG_HBA_CONF="/etc/postgresql/16/main/pg_hba.conf"
 if [ -f "$PG_HBA_CONF" ]; then
     # Backup original config
     cp "$PG_HBA_CONF" "$PG_HBA_CONF.backup"
-    
+
     # Update local connections to use 'trust' authentication for development
     sed -i 's/^local   all             all                                     peer$/local   all             all                                     trust/' "$PG_HBA_CONF"
     sed -i 's/^host    all             all             127.0.0.1\/32            scram-sha-256$/host    all             all             127.0.0.1\/32            trust/' "$PG_HBA_CONF"
     sed -i 's/^host    all             all             ::1\/128                 scram-sha-256$/host    all             all             ::1\/128                 trust/' "$PG_HBA_CONF"
-    
+
     echo "Updated PostgreSQL authentication configuration"
 fi
 

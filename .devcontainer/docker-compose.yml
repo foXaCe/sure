@@ -48,7 +48,7 @@ services:
     volumes:
       - redis-data:/data
     restart: unless-stopped
-  
+
   db:
     image: postgres:16
     volumes:

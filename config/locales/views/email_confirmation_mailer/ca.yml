@@ -7,4 +7,3 @@ ca:
       expiry_notice: Aquest enllaç caducarà en %{hours} hores.
       greeting: Hola!
       subject: '%{product_name}: Confirma el canvi de correu'
-

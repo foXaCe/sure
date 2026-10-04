@@ -38,7 +38,7 @@ export default class extends Controller {
     if (this.sessionKeyValue) {
       this.#updateSessionPreference(selectedTabId);
     }
-  } 
+  }
 
   #updateSessionPreference(selectedTabId) {
     fetch("/current_session", {

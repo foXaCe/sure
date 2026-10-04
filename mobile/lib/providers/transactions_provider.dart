@@ -49,7 +49,7 @@ class TransactionsProvider with ChangeNotifier {
 
   void _onConnectivityChanged() {
     if (_isDisposed) return;
-    
+
     // Auto-sync when connectivity is restored
     if (_connectivityService?.isOnline == true &&
         hasPendingTransactions &&
@@ -190,7 +190,7 @@ class TransactionsProvider with ChangeNotifier {
           notes: notes,
         ).then((result) async {
           if (_isDisposed) return;
-          
+
           if (result['success'] == true) {
             _log.info('TransactionsProvider', 'Transaction uploaded successfully');
             final serverTransaction = result['transaction'] as Transaction;
@@ -207,7 +207,7 @@ class TransactionsProvider with ChangeNotifier {
           }
         }).catchError((e) {
           if (_isDisposed) return;
-          
+
           _log.error('TransactionsProvider', 'Exception during upload: $e');
           _error = 'Failed to upload transaction. It will sync when online.';
           notifyListeners();

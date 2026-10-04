@@ -32,4 +32,3 @@ ca:
       verify_button: Verifica
     verify_code:
       invalid_code: Codi d'autenticació invàlid. Torna-ho a provar.
-

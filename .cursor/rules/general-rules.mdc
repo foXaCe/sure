@@ -3,7 +3,7 @@ description: Miscellaneous rules to get the AI to behave
 globs: *
 alwaysApply: true
 ---
-# General rules for AI 
+# General rules for AI
 
 - Use `Current.user` for the current user. Do NOT use `current_user`.
 - Use `Current.family` for the current family. Do NOT use `current_family`.

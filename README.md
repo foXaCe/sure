@@ -5,13 +5,13 @@
 
 <p align="center">
   <!-- Keep these links. Translations will automatically update with the README. -->
-  <a href="https://readme-i18n.com/de/we-promise/sure">Deutsch</a> | 
-  <a href="https://readme-i18n.com/es/we-promise/sure">Español</a> | 
-  <a href="https://readme-i18n.com/fr/we-promise/sure">Français</a> | 
-  <a href="https://readme-i18n.com/ja/we-promise/sure">日本語</a> | 
-  <a href="https://readme-i18n.com/ko/we-promise/sure">한국어</a> | 
-  <a href="https://readme-i18n.com/pt/we-promise/sure">Português</a> | 
-  <a href="https://readme-i18n.com/ru/we-promise/sure">Русский</a> | 
+  <a href="https://readme-i18n.com/de/we-promise/sure">Deutsch</a> |
+  <a href="https://readme-i18n.com/es/we-promise/sure">Español</a> |
+  <a href="https://readme-i18n.com/fr/we-promise/sure">Français</a> |
+  <a href="https://readme-i18n.com/ja/we-promise/sure">日本語</a> |
+  <a href="https://readme-i18n.com/ko/we-promise/sure">한국어</a> |
+  <a href="https://readme-i18n.com/pt/we-promise/sure">Português</a> |
+  <a href="https://readme-i18n.com/ru/we-promise/sure">Русский</a> |
   <a href="https://readme-i18n.com/zh/we-promise/sure">中文</a>
 </p>
 

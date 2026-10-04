@@ -8,4 +8,3 @@ ca:
         enable_mfa: Activa 2FA
         mfa_description: Afegeix una capa extra de seguretat al teu compte requerint un codi de la teva app d'autenticació en iniciar sessió
         mfa_title: Autenticació en dos passos
-

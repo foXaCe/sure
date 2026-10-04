@@ -15,7 +15,7 @@ export default class extends Controller {
       this.element.showModal();
     }
   }
-  
+
   // If the user clicks anywhere outside of the visible content, close the dialog
   clickOutside(e) {
     if (!this.contentTarget.contains(e.target)) {

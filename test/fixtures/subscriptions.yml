@@ -1,6 +1,6 @@
 active:
-  family: dylan_family 
-  status: active 
+  family: dylan_family
+  status: active
   stripe_id: "test_1234567890"
 
 trialing:

@@ -29,7 +29,7 @@ pt-BR:
         create_account: Criar conta
         csv_mapping_label: "%{mapping} no CSV"
         sure_mapping_label: "%{mapping} no %{product_name}"
-        no_accounts: Você ainda não tem contas. Crie uma conta que possamos usar para 
+        no_accounts: Você ainda não tem contas. Crie uma conta que possamos usar para
           linhas (não atribuídas) no seu CSV ou volte para a etapa de Limpeza e forneça
           um nome de conta que possamos usar.
         rows_label: Linhas
@@ -46,7 +46,7 @@ pt-BR:
           categorias existentes no %{product_name}. Você também pode adicionar novas categorias ou deixá-las
           sem categoria.
         category_mapping_title: Atribuir suas categorias
-        tag_mapping_description: Atribua todas as tags do seu arquivo importado às 
+        tag_mapping_description: Atribua todas as tags do seu arquivo importado às
           tags existentes no %{product_name}. Você também pode adicionar novas tags ou deixá-las
           sem categoria.
         tag_mapping_title: Atribuir suas tags
