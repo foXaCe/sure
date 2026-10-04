@@ -18,7 +18,12 @@ ENV["PLAID_SECRET"] ||= "test_secret"
 ENV["PGGSSENCMODE"] = "disable"
 
 require "rails/test_help"
-require "minitest/mock"
+begin
+  require "minitest/mock"
+rescue LoadError
+  # minitest 6 a extrait minitest/mock dans le gem minitest-mock
+  require "minitest-mock"
+end
 require "minitest/autorun"
 require "mocha/minitest"
 require "aasm/minitest"
